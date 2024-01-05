@@ -110,22 +110,32 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-//
 
 let passwordLength = window.prompt("How many characters would you like? (8-128)")
-  console.log(passwordLength)
-  
-  
-let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
-  console.log(passwordcase)
-
-let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
-console.log(passwordnum)
-
-let passwordspecial = window.prompt("Would you like to include special characters? (Yes/No)")
-console.log(passwordspecial)
-
+if (passwordLength <8 || passwordLength >128){
+  alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
+return
 }
+
+// var x=null
+// if(x==null){
+//   alert("No Text Entered - Please type Yes or No  SELECT GENERATE A PASSWORD TO START AGAIN");
+
+// }
+  
+
+let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
+
+
+ // Include Numbers?
+let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
+
+
+   // special characters
+let passwordspecial = window.prompt("Would you like to include special characters? (Yes/No)")
+}
+
+
 
 
 // array of available charactters
@@ -155,6 +165,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
   passwordText.value = password;
+  
 
 }
 
