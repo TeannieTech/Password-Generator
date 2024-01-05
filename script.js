@@ -88,28 +88,48 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-//series of prompts - length, they enter a number - create from their number
-//create window prompt box to ask the questions - GOOGLE - save as var
+//series of prompts
 
 
-let passwordLength = window.prompt("How many characters would you like (8-128)")
-console.log(passwordLength)
 
-let passwordcase = window.prompt("Would you like to include uppercase (yes/No)")
-console.log(passwordcase)
 
-let passwordnum = window.prompt("Would you like to include numbers (yes/No)")
-console.log(passwordnum)
 
-let passwordspecial = window.prompt("Would you like to include special characters (yes/No)")
-console.log(passwordspecial)
+// function askYesNoQuestion(question) {
+//   let answer = prompt(question + " (yes or no)");
+//   if (answer.toLowerCase() === "yes") {
+//     return true;
+//   } else if (answer.toLowerCase() === "no") {
+//     return false;
+//   } else {
+//     // If the user enters an invalid response, prompt again
+//     alert("Please enter 'yes' or 'no'");
+//     return askYesNoQuestion(question);
+//   }
+// }
+
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+//
 
-  //window prompt
+let passwordLength = window.prompt("How many characters would you like? (8-128)")
+  console.log(passwordLength)
+  
+  
+let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
+  console.log(passwordcase)
+
+let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
+console.log(passwordnum)
+
+let passwordspecial = window.prompt("Would you like to include special characters? (Yes/No)")
+console.log(passwordspecial)
 
 }
+
+
+// array of available charactters
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -131,10 +151,11 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
+  getPasswordOptions ()
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
-
   passwordText.value = password;
+
 }
 
 // Add event listener to generate button - reference to button - will use write function - wiill save password to this var. will write password to page
@@ -143,10 +164,7 @@ generateBtn.addEventListener('click', writePassword);
 
 //function
 //return
-
-// how long 
-//uper/lower
-//special char yes/no
+//anything inside {} is block of code
 
 
 // * Generate a password when the button is clicked

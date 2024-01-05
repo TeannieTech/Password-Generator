@@ -39,9 +39,9 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
 
--
+
+- https://www.shecodes.io/athena/10106-creating-a-yes-or-no-function-in-javascript
 
 ## License
 MIT License
