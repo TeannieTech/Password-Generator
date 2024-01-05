@@ -117,24 +117,54 @@ if (passwordLength <8 || passwordLength >128){
 return
 }
 
-// var x=null
-// if(x==null){
-//   alert("No Text Entered - Please type Yes or No  SELECT GENERATE A PASSWORD TO START AGAIN");
-
-// }
-  
-
+ // Include uppercase?
 let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
+
+if (passwordcase === "Yes") {
+  // If user entered "Yes", confirm to them
+  alert("Great, I will include uppercase characters!");
+} else if (passwordcase === "No") {
+  // If user entered "No", confirm to them
+  alert("OK, I won't include uppercase characters");
+    // anything else including if left empty
+} else {
+  alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
+  return
+}
 
 
  // Include Numbers?
 let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
 
+if (passwordnum === "Yes") {
+  // If user entered "Yes", confirm to them
+  alert("Great, I will include numbers!");
+} else if (passwordnum === "No") {
+  // If user entered "No", confirm to them
+  alert("OK, I won't include numbers");
+    // anything else including if left empty
+} else {
+  alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
+  return
+}
+
 
    // special characters
 let passwordspecial = window.prompt("Would you like to include special characters? (Yes/No)")
+
+if (passwordspecial === "Yes") {
+  // If user entered "Yes", confirm to them
+  alert("Great, I will include special characters!");
+} else if (passwordspecial === "No") {
+  // If user entered "No", confirm to them
+  alert("OK, I won't include special characters");
+    // anything else including if left empty
+} else {
+  alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
+  return
 }
 
+}
 
 
 
