@@ -114,23 +114,34 @@ function getPasswordOptions() {
 let passwordLength = window.prompt("How many characters would you like? (8-128)")
 if (passwordLength <8 || passwordLength >128){
   alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
-return
+  return false
+
+} if (passwordLength >8 || passwordLength <128) {
+  // If user entered "No", confirm to them
+  alert("Great, Lets get started");  
+  return true 
+
+} else {
+  alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN.");
+return false
 }
 
  // Include uppercase?
 let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
 
 if (passwordcase === "Yes") {
-  // If user entered "Yes", confirm to them
+  // If user entered "Yes", confirm to them - if yes passwod casr equaks yes
   alert("Great, I will include uppercase characters!");
-} else if (passwordcase === "No") {
+  return true
+} if (passwordcase === "No") {
   // If user entered "No", confirm to them
   alert("OK, I won't include uppercase characters");
+  return false
     // anything else including if left empty
 } else {
   alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
-  return
-}
+  return false
+} 
 
 
  // Include Numbers?
@@ -139,7 +150,7 @@ let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
 if (passwordnum === "Yes") {
   // If user entered "Yes", confirm to them
   alert("Great, I will include numbers!");
-} else if (passwordnum === "No") {
+} if (passwordnum === "No") {
   // If user entered "No", confirm to them
   alert("OK, I won't include numbers");
     // anything else including if left empty
@@ -155,7 +166,7 @@ let passwordspecial = window.prompt("Would you like to include special character
 if (passwordspecial === "Yes") {
   // If user entered "Yes", confirm to them
   alert("Great, I will include special characters!");
-} else if (passwordspecial === "No") {
+} if (passwordspecial === "No") {
   // If user entered "No", confirm to them
   alert("OK, I won't include special characters");
     // anything else including if left empty
@@ -174,14 +185,13 @@ if (passwordspecial === "Yes") {
 // Function for getting a random element from an array
 function getRandom(arr) {
 // use array list at top
-
 }
 
-// Function to generate password with user input
+// Function to ge-                nerate password with user input
 function generatePassword() {
 
   //could be if statement (lower case) all possible condirions with 4 chatcer types - or switch statements 
-
+if
 
 }
 
@@ -208,8 +218,6 @@ generateBtn.addEventListener('click', writePassword);
 //anything inside {} is block of code
 
 
-// * Generate a password when the button is clicked
-// * Present a series of prompts for password criteria - window
 // * Length of password - - depends on what they select - use prompt to save number they select
 //   * At least 8 characters but no more than 128.
 // * Character types
@@ -219,3 +227,6 @@ generateBtn.addEventListener('click', writePassword);
 //   * Special characters ($@%&*, etc) - 
 // * Code should validate for each input and at least one character type should be selected
 // * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+
+
+//tutor make go back to same question
