@@ -94,88 +94,116 @@ var upperCasedCharacters = [
 
 
 
-// function askYesNoQuestion(question) {
-//   let answer = prompt(question + " (yes or no)");
-//   if (answer.toLowerCase() === "yes") {
-//     return true;
-//   } else if (answer.toLowerCase() === "no") {
-//     return false;
-//   } else {
-//     // If the user enters an invalid response, prompt again
-//     alert("Please enter 'yes' or 'no'");
-//     return askYesNoQuestion(question);
-//   }
+
+// Function to prompt user for password options
+
+function getPasswordOptions() {
+
+  var passwordLength = window.prompt("How many characters would you like? (8-128)")
+  if (passwordLength <8 || passwordLength >128){
+    alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
+
+  } 
+
+   // Include uppercase?
+  var passwordCase = confirm("Would you like to include uppercase? (Select 'OK' for Yes / Select 'Cancel' for No)");
+  if (passwordCase == true) {
+    alert("Great, I will include uppercase characters!");
+  } else {
+    alert("OK, I won't include uppercase characters");
+  }
+
+
+
+   // Include Numbers?
+  var passwordnum = confirm("Would you like to include numbers? (Select 'OK' for Yes / Select 'Cancel' for No)")
+  if (passwordnum == true) {
+    alert("Great, I will include numbers!");
+  } else {
+    alert("OK, I won't include numbers");
+  }
+
+  
+     // special characters
+  var passwordspecial = confirm("Would you like to include special characters? (Select 'OK' for Yes / Select 'Cancel' for No)")
+  if (passwordspecial == true) {
+    alert("Great, I will include special characters!");
+  } else {
+    alert("OK, I won't include special characters");
+  }
+
+}
+
+  
+
+
+// function getPasswordOptions() {
+
+// let passwordLength = window.prompt("How many characters would you like? (8-128)")
+// if (passwordLength <8 || passwordLength >128){
+//   alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
+//   return false
+
+// } if (passwordLength >8 || passwordLength <128) {
+//   // If user entered "No", confirm to them
+//   alert("Great, Lets get started");  
+//   return true 
+
+// } else {
+//   alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN.");
+// return false
+// }
+
+//  // Include uppercase?
+// let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
+
+// if (passwordcase === "Yes") {
+//   // If user entered "Yes", confirm to them - if yes passwod casr equaks yes
+//   alert("Great, I will include uppercase characters!");
+//   return true
+// } if (passwordcase === "No") {
+//   // If user entered "No", confirm to them
+//   alert("OK, I won't include uppercase characters");
+//   return false
+//     // anything else including if left empty
+// } else {
+//   alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
+//   return false
+// } 
+
+
+//  // Include Numbers?
+// let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
+
+// if (passwordnum === "Yes") {
+//   // If user entered "Yes", confirm to them
+//   alert("Great, I will include numbers!");
+// } if (passwordnum === "No") {
+//   // If user entered "No", confirm to them
+//   alert("OK, I won't include numbers");
+//     // anything else including if left empty
+// } else {
+//   alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
+//   return
 // }
 
 
-// Function to prompt user for password options
-function getPasswordOptions() {
+//    // special characters
+// let passwordspecial = window.prompt("Would you like to include special characters? (Yes/No)")
 
-let passwordLength = window.prompt("How many characters would you like? (8-128)")
-if (passwordLength <8 || passwordLength >128){
-  alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
-  return false
+// if (passwordspecial === "Yes") {
+//   // If user entered "Yes", confirm to them
+//   alert("Great, I will include special characters!");
+// } if (passwordspecial === "No") {
+//   // If user entered "No", confirm to them
+//   alert("OK, I won't include special characters");
+//     // anything else including if left empty
+// } else {
+//   alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
+//   return
+// }
 
-} if (passwordLength >8 || passwordLength <128) {
-  // If user entered "No", confirm to them
-  alert("Great, Lets get started");  
-  return true 
-
-} else {
-  alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN.");
-return false
-}
-
- // Include uppercase?
-let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
-
-if (passwordcase === "Yes") {
-  // If user entered "Yes", confirm to them - if yes passwod casr equaks yes
-  alert("Great, I will include uppercase characters!");
-  return true
-} if (passwordcase === "No") {
-  // If user entered "No", confirm to them
-  alert("OK, I won't include uppercase characters");
-  return false
-    // anything else including if left empty
-} else {
-  alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
-  return false
-} 
-
-
- // Include Numbers?
-let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
-
-if (passwordnum === "Yes") {
-  // If user entered "Yes", confirm to them
-  alert("Great, I will include numbers!");
-} if (passwordnum === "No") {
-  // If user entered "No", confirm to them
-  alert("OK, I won't include numbers");
-    // anything else including if left empty
-} else {
-  alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
-  return
-}
-
-
-   // special characters
-let passwordspecial = window.prompt("Would you like to include special characters? (Yes/No)")
-
-if (passwordspecial === "Yes") {
-  // If user entered "Yes", confirm to them
-  alert("Great, I will include special characters!");
-} if (passwordspecial === "No") {
-  // If user entered "No", confirm to them
-  alert("OK, I won't include special characters");
-    // anything else including if left empty
-} else {
-  alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
-  return
-}
-
-}
+// }
 
 
 
@@ -191,7 +219,6 @@ function getRandom(arr) {
 function generatePassword() {
 
   //could be if statement (lower case) all possible condirions with 4 chatcer types - or switch statements 
-if
 
 }
 
