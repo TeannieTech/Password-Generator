@@ -101,9 +101,13 @@ function getPasswordOptions() {
 
   var passwordLength = window.prompt("How many characters would you like? (8-128)")
   if (passwordLength <8 || passwordLength >128){
-    alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
+    alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN");
+  } else {
+    alert ("Please only enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
+  }
 
-  } 
+
+  
 
    // Include uppercase?
   var passwordCase = confirm("Would you like to include uppercase? (Select 'OK' for Yes / Select 'Cancel' for No)");
@@ -132,8 +136,8 @@ function getPasswordOptions() {
     alert("OK, I won't include special characters");
   }
 
-}
 
+}
   
 
 
