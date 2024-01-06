@@ -102,11 +102,10 @@ function getPasswordOptions() {
   var passwordLength = window.prompt("How many characters would you like? (8-128)")
   if (passwordLength <8 || passwordLength >128){
     alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN");
-  } else {
-    alert ("Please only enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
+  } 
+  else {
+  alert("Great! You've selected a valid password length.");
   }
-
-
   
 
    // Include uppercase?
@@ -136,79 +135,7 @@ function getPasswordOptions() {
     alert("OK, I won't include special characters");
   }
 
-
 }
-  
-
-
-// function getPasswordOptions() {
-
-// let passwordLength = window.prompt("How many characters would you like? (8-128)")
-// if (passwordLength <8 || passwordLength >128){
-//   alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN")
-//   return false
-
-// } if (passwordLength >8 || passwordLength <128) {
-//   // If user entered "No", confirm to them
-//   alert("Great, Lets get started");  
-//   return true 
-
-// } else {
-//   alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN.");
-// return false
-// }
-
-//  // Include uppercase?
-// let passwordcase = window.prompt("Would you like to include uppercase? (Yes/No)")
-
-// if (passwordcase === "Yes") {
-//   // If user entered "Yes", confirm to them - if yes passwod casr equaks yes
-//   alert("Great, I will include uppercase characters!");
-//   return true
-// } if (passwordcase === "No") {
-//   // If user entered "No", confirm to them
-//   alert("OK, I won't include uppercase characters");
-//   return false
-//     // anything else including if left empty
-// } else {
-//   alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
-//   return false
-// } 
-
-
-//  // Include Numbers?
-// let passwordnum = window.prompt("Would you like to include numbers? (Yes/No)")
-
-// if (passwordnum === "Yes") {
-//   // If user entered "Yes", confirm to them
-//   alert("Great, I will include numbers!");
-// } if (passwordnum === "No") {
-//   // If user entered "No", confirm to them
-//   alert("OK, I won't include numbers");
-//     // anything else including if left empty
-// } else {
-//   alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
-//   return
-// }
-
-
-//    // special characters
-// let passwordspecial = window.prompt("Would you like to include special characters? (Yes/No)")
-
-// if (passwordspecial === "Yes") {
-//   // If user entered "Yes", confirm to them
-//   alert("Great, I will include special characters!");
-// } if (passwordspecial === "No") {
-//   // If user entered "No", confirm to them
-//   alert("OK, I won't include special characters");
-//     // anything else including if left empty
-// } else {
-//   alert("Invalid input. Please enter 'Yes' or 'No' (Case sensative).");
-//   return
-// }
-
-// }
-
 
 
 // array of available charactters
@@ -216,7 +143,9 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-// use array list at top
+
+
+
 }
 
 // Function to ge-                nerate password with user input
