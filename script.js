@@ -88,7 +88,6 @@ var upperCasedCharacters = [
   "Z",
 ];
 
-//series of prompts
 
 // Function to prompt user for password options
 
@@ -140,7 +139,7 @@ function getPasswordOptions() {
     alert("OK, I won't include numbers");
   }
 
-  // special characters
+  // include special characters?
   var passwordspecial = confirm(
     "Would you like to include special characters? (Select 'OK' for Yes / Select 'Cancel' for No)"
   );
@@ -183,31 +182,15 @@ return randomPassword
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-//still to learn - GOOGLE - access to button that is clicked. when clicked... (call)
+
 
 // Write password to the #password input
 function writePassword() {
-  // getPasswordOptions();
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
-// Add event listener to generate button - reference to button - will use write function - wiill save password to this var. will write password to page
 generateBtn.addEventListener("click", writePassword);
 
-//function
-//return
-//anything inside {} is block of code
-
-// * Length of password - - depends on what they select - use prompt to save number they select
-//   * At least 8 characters but no more than 128.
-// * Character types
-//   * Lowercase
-//   * Uppercase
-//   * Numeric
-//   * Special characters ($@%&*, etc) -
-// * Code should validate for each input and at least one character type should be selected
-// * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
-
-//tutor make go back to same question
