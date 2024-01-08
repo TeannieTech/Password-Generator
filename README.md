@@ -18,34 +18,30 @@ I was asked to include the following;
   * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+This project solves the problem of thimking of a safe random password. I learnt how javascript works in more detail.
 
-
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+The link to my deployed application is: https://teannietech.github.io/Password-Generator/
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+To generate a random password, please click on the 'generate a random password' button. 
+Please answer the 5 questions.
+You will be given your password.
 
-![alt text](assets/images/screenshot.png)
+Screenshot of my project
+
+![alt text](/starter/PGSS.jpg)
 
 ## Credits
 
 
-
-- https://www.shecodes.io/athena/10106-creating-a-yes-or-no-function-in-javascript
+-https://www.shecodes.io/athena/10106-creating-a-yes-or-no-function-in-javascript
 -https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
 -https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
 
 ## License
+
 MIT License
 
 Copyright (c) [2024] [Teannie Binns]
@@ -84,4 +80,4 @@ SOFTWARE.
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Tested by asking family to try application
