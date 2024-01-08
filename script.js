@@ -1,5 +1,5 @@
 // Array of special characters to be included in password
-var specialCharacters = [
+const specialCharacters = [
   '@',
   '%',
   '+',
@@ -99,6 +99,8 @@ var upperCasedCharacters = [
 
 function getPasswordOptions() {
 
+  var lengthArray = []
+
   var passwordLength = window.prompt("How many characters would you like? (8-128)")
   if (passwordLength <8 || passwordLength >128){
     alert("Please enter a number between 8 and 128.  SELECT GENERATE A PASSWORD TO START AGAIN");
@@ -112,9 +114,19 @@ function getPasswordOptions() {
   var passwordCase = confirm("Would you like to include uppercase? (Select 'OK' for Yes / Select 'Cancel' for No)");
   if (passwordCase == true) {
     alert("Great, I will include uppercase characters!");
+lengthArray = lengthArray.concat(upperCasedCharacters);
   } else {
     alert("OK, I won't include uppercase characters");
   }
+
+     // Include lowercase?
+     var lowerCase = confirm("Would you like to include lowercase? (Select 'OK' for Yes / Select 'Cancel' for No)");
+     if (lowerCase == true) {
+       alert("Great, I will include lowercase characters!");
+   lengthArray = lengthArray.concat(lowerCasedCharacters);
+     } else {
+       alert("OK, I won't include lowercase characters");
+     }
 
 
 
@@ -122,6 +134,7 @@ function getPasswordOptions() {
   var passwordnum = confirm("Would you like to include numbers? (Select 'OK' for Yes / Select 'Cancel' for No)")
   if (passwordnum == true) {
     alert("Great, I will include numbers!");
+    lengthArray = lengthArray.concat(numericCharacters);
   } else {
     alert("OK, I won't include numbers");
   }
@@ -131,10 +144,11 @@ function getPasswordOptions() {
   var passwordspecial = confirm("Would you like to include special characters? (Select 'OK' for Yes / Select 'Cancel' for No)")
   if (passwordspecial == true) {
     alert("Great, I will include special characters!");
+    lengthArray = lengthArray.concat(specialCharacters);
   } else {
     alert("OK, I won't include special characters");
   }
-
+console.log(lengthArray)
 }
 
 
@@ -144,12 +158,28 @@ function getPasswordOptions() {
 // Function for getting a random element from an array
 function getRandom(arr) {
 
+  const randomElement = array[Math.floor(Math.random() * specialCharacters.length)];
+
+
+  console.log(random, specialCharacters[random]);
+
+  // const  = []
+  // const numericCharacters = []
+  // const lowerCasedCharacters = []
+  // const upperCasedCharacters = []
+
+  // var allowedCharacters = ""
 
 
 }
 
-// Function to ge-                nerate password with user input
-function generatePassword() {
+// Function to generate password with user input
+function generatePassword(passwordLength, passwordCase, passwordnum, passwordspecial) {
+
+
+
+
+
 
   //could be if statement (lower case) all possible condirions with 4 chatcer types - or switch statements 
 

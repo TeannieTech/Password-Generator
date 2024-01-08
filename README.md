@@ -43,6 +43,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 - https://www.shecodes.io/athena/10106-creating-a-yes-or-no-function-in-javascript
 -https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
+-https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
 
 ## License
 MIT License
