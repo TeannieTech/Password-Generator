@@ -108,7 +108,7 @@ function getPasswordOptions() {
 
   // Include uppercase?
   var passwordCase = confirm(
-    "Would you like to include uppercase? (Select 'OK' for Yes / Select 'Cancel' for No)"
+    "Would you like to include uppercase? (Select 'OK' for Yes / 'Cancel' for No)"
   );
   if (passwordCase == true) {
     alert("Great, I will include uppercase characters!");
@@ -119,7 +119,7 @@ function getPasswordOptions() {
 
   // Include lowercase?
   var lowerCase = confirm(
-    "Would you like to include lowercase? (Select 'OK' for Yes / Select 'Cancel' for No)"
+    "Would you like to include lowercase? (Select 'OK' for Yes / 'Cancel' for No)"
   );
   if (lowerCase == true) {
     alert("Great, I will include lowercase characters!");
@@ -130,7 +130,7 @@ function getPasswordOptions() {
 
   // Include Numbers?
   var passwordnum = confirm(
-    "Would you like to include numbers? (Select 'OK' for Yes / Select 'Cancel' for No)"
+    "Would you like to include numbers? (Select 'OK' for Yes / 'Cancel' for No)"
   );
   if (passwordnum == true) {
     alert("Great, I will include numbers!");
@@ -141,7 +141,7 @@ function getPasswordOptions() {
 
   // include special characters?
   var passwordspecial = confirm(
-    "Would you like to include special characters? (Select 'OK' for Yes / Select 'Cancel' for No)"
+    "Would you like to include special characters? (Select 'OK' for Yes / 'Cancel' for No)"
   );
   if (passwordspecial == true) {
     alert("Great, I will include special characters!");
@@ -149,6 +149,14 @@ function getPasswordOptions() {
   } else {
     alert("OK, I won't include special characters");
   }
+
+if (!passwordspecial && !passwordnum && !lowerCase && !passwordCase) {
+
+  alert ("You must select at least one character type")
+  return getPasswordOptions()
+
+}
+
   console.log(lengthArray);
   return {
     passwordLength, 
