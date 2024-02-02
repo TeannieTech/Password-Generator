@@ -10,8 +10,9 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: burlywood;
+  background-image: url(/starter/the-matrix-digital-rain.jpg);
 }
+
 
 body {
   font-family: sans-serif;
@@ -26,9 +27,12 @@ body {
 
 header {
   text-align: center;
-  padding: 20px;
+  padding-left: 500px;
+  padding: 0px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: hsl(200, 23%, 97%);
+  background-color: hsl(360, 91%, 36%);
+
 }
 
 .card {
@@ -136,3 +140,4 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
